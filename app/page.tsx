@@ -13,7 +13,7 @@ export default function Home() {
         {/* Header Section with Logo */}
         <div className="flex items-center justify-between mb-8">
           <Image
-            src={`${basePath}/images/logo.png`}
+            src={`${basePath}/public/images/logo.png`}
             alt="Aegis Logo"
             width={50}
             height={50}
