@@ -5,14 +5,14 @@ import { Input } from "@/components/ui/input"
 
 export function SearchBar() {
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-xl mx-auto">
       <Input
         type="search"
         placeholder="Search audits..."
-        className="w-full pl-10"
+        className="w-full pl-10 h-12 text-lg"
       />
       <svg
-        className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500"
+        className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-500"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
