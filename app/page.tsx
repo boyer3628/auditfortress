@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import Image from "next/image";
 import { AuditButton } from "../components/AuditButton";
 import { SearchBar } from "../components/SearchBar";

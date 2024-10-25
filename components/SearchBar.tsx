@@ -1,13 +1,13 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
+import React from 'react';
 
 export function SearchBar() {
   return (
-    <Input 
-      type="search"
-      placeholder="Auditor or Location"
-      className="max-w-full"
+    <input 
+      type="search" 
+      placeholder="Search audits..." 
+      className="w-full p-2 border rounded"
     />
   );
 }
