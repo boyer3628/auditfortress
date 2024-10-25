@@ -1,17 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Needed for static site generation
+  output: 'export',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
+    path: process.env.NODE_ENV === 'production' ? '/auditfortress' : '',
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/auditfortress' : '', // Adjust this to your repo name
-  // Temporarily disable ESLint during build
+  basePath: process.env.NODE_ENV === 'production' ? '/auditfortress' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
     ignoreBuildErrors: true,
   },
 }
