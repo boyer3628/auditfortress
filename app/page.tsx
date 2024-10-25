@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { AuditButton } from "../components/AuditButton";
+import { SearchBar } from "../components/SearchBar";
 
 export default function Home() {
   const basePath = process.env.NODE_ENV === 'production' ? '/auditfortress' : '';
@@ -9,12 +10,20 @@ export default function Home() {
   return (
     <div className="p-8">
       <main className="max-w-4xl mx-auto flex flex-col gap-8">
-        {/* Header Section */}
-        <div className="text-center space-y-4">
-          <h1 className="text-6xl font-bold">Aegis</h1>
-          <p className="text-xl">
-            Guarding what matters, one inspection at a time.
-          </p>
+        {/* Header Section with Logo */}
+        <div className="flex items-center justify-between mb-8">
+          <Image
+            src={`${basePath}/images/logo.png`}
+            alt="Aegis Logo"
+            width={50}
+            height={50}
+          />
+          <div className="text-center flex-grow">
+            <h1 className="text-6xl font-bold">Aegis</h1>
+            <p className="text-xl">
+              Guarding what matters, one inspection at a time.
+            </p>
+          </div>
         </div>
 
         {/* Audit Section */}
@@ -23,7 +32,7 @@ export default function Home() {
           <p className="text-sm text-muted-foreground">Select an Audit to begin</p>
           
           {/* Audit Type Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <AuditButton 
               type="fire"
               label="Fire Extinguisher"
@@ -45,7 +54,22 @@ export default function Home() {
               href="/audit/custodial"
               imagePath={`${basePath}/images/custodial-audit.png`}
             />
+            <AuditButton 
+              type="landscaping"
+              label="Landscaping"
+              subtitle="Inspect a Location"
+              href="/audit/landscaping"
+              imagePath={`${basePath}/images/landscaping-audit.png`}
+            />
           </div>
+        </div>
+
+        {/* Search Section */}
+        <div className="space-y-2">
+          <h2 className="text-xl font-semibold">
+            Search for an audit by Auditor name or by Location name.
+          </h2>
+          <SearchBar />
         </div>
       </main>
     </div>

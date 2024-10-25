@@ -19,8 +19,8 @@ export function AuditButton({ type, label, subtitle, href, imagePath }: AuditBut
           <Image
             src={imagePath}
             alt={`${type} audit icon`}
-            width={200}
-            height={200}
+            fill
+            style={{ objectFit: "cover" }}
             priority
           />
         </div>
