@@ -53,14 +53,14 @@ export default function Home() {
               label="Custodial"
               subtitle="Inspect a Location"
               href="/audit/custodial"
-              imagePath={`${basePath}/images/custodial-audit.png`}
+              imagePath="./public/images/custodial-audit.png"
             />
             <AuditButton 
               type="landscaping"
               label="Landscaping"
               subtitle="Inspect a Location"
               href="/audit/landscaping"
-              imagePath={`${basePath}/images/landscaping-audit.png`}
+              imagePath="./public/images/landscaping-audit.png"
             />
           </div>
         </div>
