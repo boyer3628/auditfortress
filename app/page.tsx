@@ -38,28 +38,28 @@ export default function Home() {
               label="Fire Extinguisher"
               subtitle="Inspect a Fire Extinguisher"
               href="/audit/fire"
-              imagePath={`${basePath}/images/fire-audit.png`}
+              imagePath={`${basePath}/public/images/fire-audit.png`}
             />
             <AuditButton 
               type="ladder"
               label="Ladder"
               subtitle="Inspect a Ladder"
               href="/audit/ladder"
-              imagePath={`${basePath}/images/ladder-audit.png`}
+              imagePath={`${basePath}/public/images/ladder-audit.png`}
             />
             <AuditButton 
               type="custodial"
               label="Custodial"
               subtitle="Inspect a Location"
               href="/audit/custodial"
-              imagePath={`${basePath}/images/custodial-audit.png`}
+              imagePath={`${basePath}/public/images/custodial-audit.png`}
             />
             <AuditButton 
               type="landscaping"
               label="Landscaping"
               subtitle="Inspect a Location"
               href="/audit/landscaping"
-              imagePath={`${basePath}/images/landscaping-audit.png`}
+              imagePath={`${basePath}/public/images/landscaping-audit.png`}
             />
           </div>
         </div>
